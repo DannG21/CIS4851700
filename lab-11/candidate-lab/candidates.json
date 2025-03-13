@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "sir reginald dinglehoffer",
+    "party": "biscuit enthusiasts",
+    "platform": "pro-biscuit legislation",
+    "slogan": "a biscuit in every hand, a smile on every face"
+  },
+  {
+    "id": 2,
+    "name": "John Doe",
+    "party": "Tech Party",
+    "platform": "Innovation",
+    "slogan": "Simplify"
+  }
+]
