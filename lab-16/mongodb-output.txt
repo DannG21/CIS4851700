@@ -1,0 +1,9 @@
+lab-db> db.lab_collection.find()
+[
+  {
+    _id: ObjectId('67ff055a12e735adcbb5f899'),
+    name: 'Test Name',
+    value: 'Test Value'
+  }
+]
+lab-db>
