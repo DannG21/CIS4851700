@@ -1,4 +1,3 @@
-// server/src/models/Entry.js
 const pool = require('../db');
 
 class Entry {
@@ -10,7 +9,6 @@ class Entry {
     this.notes = notes;
   }
 
-  // List entries for a habit
   static async listByHabit(habitId) {
     const { rows } = await pool.query(
       `SELECT * FROM entries WHERE habit_id=$1 ORDER BY entry_date DESC`,
@@ -19,7 +17,6 @@ class Entry {
     return rows.map(r => new Entry(r));
   }
 
-  // Get one entry
   static async getById(habitId, id) {
     const { rows } = await pool.query(
       `SELECT * FROM entries WHERE id=$1 AND habit_id=$2`,
@@ -28,7 +25,6 @@ class Entry {
     return rows[0] ? new Entry(rows[0]) : null;
   }
 
-  // Create an entry
   static async create({ habit_id, entry_date, completed = false, notes = null }) {
     const { rows } = await pool.query(
       `INSERT INTO entries (habit_id, entry_date, completed, notes)
@@ -38,7 +34,6 @@ class Entry {
     return new Entry(rows[0]);
   }
 
-  // Update an entry
   static async update(id, habitId, { entry_date, completed, notes }) {
     const { rows } = await pool.query(
       `UPDATE entries
@@ -50,7 +45,6 @@ class Entry {
     return rows[0] ? new Entry(rows[0]) : null;
   }
 
-  // Patch an entry
   static async patch(id, habitId, fields) {
     const keys = Object.keys(fields);
     if (!keys.length) throw new Error('No fields to patch');
@@ -68,7 +62,6 @@ class Entry {
     return rows[0] ? new Entry(rows[0]) : null;
   }
 
-  // Delete an entry
   static async remove(id, habitId) {
     const { rowCount } = await pool.query(
       `DELETE FROM entries WHERE id=$1 AND habit_id=$2`,
