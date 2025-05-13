@@ -1,4 +1,3 @@
-// client/src/components/HabitDetail.jsx
 import React, { useState, useEffect } from 'react';
 import ProgressChart from './ProgressChart';
 
@@ -10,7 +9,6 @@ export default function HabitDetail({ habit, onClose }) {
   const [notes, setNotes] = useState('');
   const token = localStorage.getItem('token');
 
-  // 1️⃣ Load entries & goals when habit changes
   useEffect(() => {
     async function loadData() {
       const [eRes, gRes] = await Promise.all([
@@ -23,7 +21,6 @@ export default function HabitDetail({ habit, onClose }) {
     loadData();
   }, [habit, token]);
 
-  // 2️⃣ Submit a new entry
   async function handleAddEntry(e) {
     e.preventDefault();
     const res = await fetch('/api/entries', {
