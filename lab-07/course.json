@@ -1,0 +1,31 @@
+{
+  "title": "Math 101",
+  "description": "Introduction to Algebra",
+  "duration": 3,
+  "students": [
+    {
+      "name": "John Doe",
+      "age": 20,
+      "subjects": [
+        "Algebra",
+        "Calculus"
+      ]
+    },
+    {
+      "name": "Gerard Smith",
+      "age": 22,
+      "subjects": [
+        "Geometry",
+        "Statistics"
+      ]
+    },
+    {
+      "name": "Steph Johnson",
+      "age": 19,
+      "subjects": [
+        "Trigonometry",
+        "Statistics"
+      ]
+    }
+  ]
+}
