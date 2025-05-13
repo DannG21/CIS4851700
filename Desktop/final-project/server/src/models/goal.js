@@ -1,4 +1,3 @@
-// server/src/models/Goal.js
 const pool = require('../db');
 
 class Goal {
@@ -9,7 +8,6 @@ class Goal {
     this.period = period;
   }
 
-  // List goals for a habit
   static async listByHabit(habitId) {
     const { rows } = await pool.query(
       `SELECT * FROM goals WHERE habit_id=$1`,
@@ -18,7 +16,6 @@ class Goal {
     return rows.map(r => new Goal(r));
   }
 
-  // Get one goal
   static async getById(habitId, id) {
     const { rows } = await pool.query(
       `SELECT * FROM goals WHERE id=$1 AND habit_id=$2`,
@@ -27,7 +24,6 @@ class Goal {
     return rows[0] ? new Goal(rows[0]) : null;
   }
 
-  // Create a goal
   static async create({ habit_id, target_count, period }) {
     const { rows } = await pool.query(
       `INSERT INTO goals (habit_id, target_count, period)
@@ -37,7 +33,6 @@ class Goal {
     return new Goal(rows[0]);
   }
 
-  // Update a goal
   static async update(id, habitId, { target_count, period }) {
     const { rows } = await pool.query(
       `UPDATE goals
@@ -49,7 +44,6 @@ class Goal {
     return rows[0] ? new Goal(rows[0]) : null;
   }
 
-  // Patch a goal
   static async patch(id, habitId, fields) {
     const keys = Object.keys(fields);
     if (!keys.length) throw new Error('No fields to patch');
@@ -67,7 +61,6 @@ class Goal {
     return rows[0] ? new Goal(rows[0]) : null;
   }
 
-  // Delete a goal
   static async remove(id, habitId) {
     const { rowCount } = await pool.query(
       `DELETE FROM goals WHERE id=$1 AND habit_id=$2`,
