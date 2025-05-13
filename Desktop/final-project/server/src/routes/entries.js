@@ -1,4 +1,3 @@
-// server/src/routes/entries.js
 const router = require('express').Router();
 const auth = require('../middleware/auth');
 const Entry = require('../models/entry');
