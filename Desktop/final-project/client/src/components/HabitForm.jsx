@@ -1,4 +1,3 @@
-// client/src/components/HabitForm.jsx
 import React, { useState } from 'react';
 
 export default function HabitForm({ onAddHabit, onClose }) {
