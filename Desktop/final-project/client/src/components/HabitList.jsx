@@ -1,4 +1,3 @@
-// client/src/components/HabitList.jsx
 import React from 'react';
 
 export default function HabitList({ habits, onHabitClick }) {
