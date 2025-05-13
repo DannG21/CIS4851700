@@ -1,4 +1,3 @@
-// server/src/routes/habits.js
 const router = require('express').Router();
 const auth = require('../middleware/auth');
 const Habit = require('../models/habit');
