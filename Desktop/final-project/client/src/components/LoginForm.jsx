@@ -24,7 +24,6 @@ function LoginForm({ onLogin }) {
 
       const data = await res.json();
 
-      // ✅ Store JWT token
       localStorage.setItem('token', data.token);
 
       // Optional: Call a callback to update auth state in parent
