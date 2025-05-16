@@ -1,5 +1,6 @@
-# Habit Tracker Application
+First of all, I had problems with my Git and this repository so it was a disaster trying to commit my final project and I had to restore the project. For that reason it was commited this way.
 
+# Habit Tracker Application
 A full-stack web application for tracking daily habits and personal goals.
 
 ## Features
@@ -29,44 +30,6 @@ A full-stack web application for tracking daily habits and personal goals.
 - Rate limiting
 - Unit and integration tests
 
-## Development Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/habit-tracker.git
-cd habit-tracker
-```
-
-2. Install dependencies:
-```bash
-npm run install-all
-```
-
-3. Set up environment variables:
-Create `.env` files in both `backend` and `fronted` directories:
-
-Backend `.env`:
-```
-DB_USER=your_db_user
-DB_PASSWORD=your_db_password
-DB_NAME=your_db_name
-DB_HOST=localhost
-DB_PORT=5432
-JWT_SECRET=your_jwt_secret
-NODE_ENV=development
-```
-
-Frontend `.env`:
-```
-REACT_APP_API_URL=http://localhost:5001/api
-REACT_APP_PUBLIC_VAPID_KEY=your_vapid_key
-```
-
-4. Start development servers:
-```bash
-npm run dev
-```
-
 ## Testing
 
 Run backend tests:
@@ -87,15 +50,6 @@ The application is set up for automatic deployment using GitHub Actions:
 2. Frontend deploys to Netlify
 3. Database hosted on managed PostgreSQL service
 
-### Required Secrets for Deployment
-
-Add the following secrets to your GitHub repository:
-
-- `HEROKU_API_KEY`
-- `HEROKU_APP_NAME`
-- `HEROKU_EMAIL`
-- `NETLIFY_AUTH_TOKEN`
-- `NETLIFY_SITE_ID`
 
 ### SSL Certificate Setup
 
