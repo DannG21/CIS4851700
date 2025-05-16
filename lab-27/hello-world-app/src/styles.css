@@ -1,0 +1,31 @@
+nav {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+  color: #0056b3;
+}
+
+nav a.active {
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+}
+
+div {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+h1 {
+  color: #343a40;
+} 
