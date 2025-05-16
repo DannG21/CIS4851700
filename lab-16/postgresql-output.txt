@@ -1,0 +1,7 @@
+lab_16=# SELECT * FROM table1;
+ id |  name
+----+--------
+  1 | George
+  2 | Jerry
+  3 | Larry
+(3 rows)

@@ -1,0 +1,23 @@
+{
+    "home": {
+      "welcomeMessage": "Welcome to My Website!",
+      "introText": "This is a sample website created for Web Programming II Lab."
+    },
+    "gallery": [
+      {
+        "title": "Image 1",
+        "src": "images/R.jpg",
+        "description": "Image 1"
+      },
+      {
+        "title": "Image 2",
+        "src": "images/R2.jpg",
+        "description": "Image 2"
+      },
+      {
+        "title": "Image 3",
+        "src": "images/R3.jpg",
+        "description": "Image 3"
+      }
+    ]
+  }
